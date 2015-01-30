@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Investigating Central Limit Theorem with Exponential Distributions</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Investigating Central Limit Theorem with Exponential Distributions">
+  <meta name="author" content="Kitdia">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Investigating Central Limit Theorem with Exponential Distributions</h1>
+    <h2></h2>
+    <p>Kitdia<br/>Lecturer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I want to demostrate the theory of Central Limit Theorem to my students.</p>
+
+<p>However, doing it through R is kinda boring and might not interest them. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Proposed Solution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Create an interactive application so that </p>
+
+<ul>
+<li><p>The results are intuitive enough for my students to understand</p></li>
+<li><p>They can explore it at home</p></li>
+<li><p>I can always re-use this application be it for future classes or for other lecturers&#39; usage</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Solution</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Created an interactive Shiny Application. </p>
+
+<p>This application will investigate the distribution of averages of 40 exponentials, allowing students to choose the values for lambda and number of simulations and then returning the distribution of the simulated data.</p>
+
+<p>Example</p>
+
+<ul>
+<li>Assume lambda is chosen to be = 0.2</li>
+<li>One simulated data will be produced through the r function: rexp(n,lambda)</li>
+</ul>
+
+<pre><code class="r">n=40
+lambda=0.2
+mean( rexp(n,lambda) )
+</code></pre>
+
+<pre><code>## [1] 4.50442
+</code></pre>
+
+<p>The application and more info on it can be found at: <a href="https://kitdia.shinyapps.io/shiny2/">https://kitdia.shinyapps.io/shiny2/</a> .</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Thanks and feedback location</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I hope this helps any lecturers with similar problem.</p>
+
+<p>Please direct feedback to <a href="mailto:kitdia2903@gmail.com">kitdia2903@gmail.com</a>.</p>
+
+<p>Thanks you for your time and feedback.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Problem'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Proposed Solution'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Solution'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Thanks and feedback location'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
